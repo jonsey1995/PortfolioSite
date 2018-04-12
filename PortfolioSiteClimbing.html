@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <title>Liam Jones PortfolioSite</title>
+	<link rel="stylesheet" href="PortfolioSiteClimbing.css">
+	<script type="text/javascript" src="PortfolioSiteHome.js"></script>
+	<script type="text/javascript">
+	var spanishAdventure = new Array();
+
+spanishAdventure[0] = new Image();
+spanishAdventure[0].src = 'https://drive.google.com/drive/u/0/folders/1vxPnuJQ12io-HrV99GNqQzt49Q9cQeFk';
+
+spanishAdventure[1] = new Image();
+spanishAdventure[1].src = 'https://drive.google.com/drive/u/0/folders/1vxPnuJQ12io-HrV99GNqQzt49Q9cQeFk';
+
+spanishAdventure[2] = new Image();
+spanishAdventure[2].src = 'https://drive.google.com/drive/u/0/folders/1vxPnuJQ12io-HrV99GNqQzt49Q9cQeFk';
+
+spanishAdventure[3] = new Image();
+spanishAdventure[3].src = 'https://drive.google.com/drive/u/0/folders/1vxPnuJQ12io-HrV99GNqQzt49Q9cQeFk';
+
+spanishAdventure[4] = new Image();
+spanishAdventure[4].src = 'https://drive.google.com/drive/u/0/folders/1vxPnuJQ12io-HrV99GNqQzt49Q9cQeFk';
+
+spanishAdventure[5] = new Image();
+spanishAdventure[5].src = 'Assets/SpanishAdventure/HarryKneebar.jpg';
+
+spanishAdventure[6] = new Image();
+spanishAdventure[6].src = 'Assets/SpanishAdventure/Liam7b+.jpg';
+
+var num = 0;
+
+function galleryNext(){
+num=num+1
+if (num==7)
+{num=1}
+document.getElementById('mySlides').src=spanishAdventure[num];
+});
+
+function galleryPrev(){
+num=num-1
+if (num<0)
+{num=6}
+document.getElementById('mySlides').src=spanishAdventure[num];
+});
+	</script>
+  </head>
+  
+  <body>
+  
+    <div class = "sidenav" id="sideNav">
+	  <nav>
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="PortfolioSiteHome.html">About</a>
+      <a href="PortfolioSiteWeb.html">Web Development</a>
+      <a href="PortfolioSiteClimbing.html">Climbing</a>
+      <a href="PortfolioSiteMusic.html">Music</a>
+	  </nav>
+	  
+	  <div class="socialmedia">
+	    <a href="#"><img src="Assets/facebook.png" alt="facebook"><a>
+		<a href="#"><img src="Assets/Instagram.png" alt="instagram"><a>
+		<a href="#"><img src="Assets/UKC.gif" alt="UKClimbing"><a>
+		<a href="#"><img src="Assets/LinkedIn.png" alt="LinkedIn"><a>
+		
+		
+	  </div>
+
+    </div>
+	
+	<div class ="main" id="main">
+	  <button>
+	  <img id = "menubutton" onclick="openNav()" src="Assets/menu2-icon.png">
+	  </button>
+	  
+	  <header class="title">
+	  Climbing 
+	  </header>
+	
+	<div class="articles">
+	
+	  
+	  <section class="article fade-in one" id="TheGoldenHour" onclick="openModal()">
+	  
+	  <h3>The Spanish Adventure</h3>
+	  
+	  <p> Tom Pearson and I spent 3 weeks over New Years roaming 'round Spain in his van.  Spending time in Siurana (Catalunya), Chulilla (Valencia), Riglos (near Huesca) and a final stop before our ferry home in drizzly Font! 
+	  Travelling with the van gives you so much freedom to stop wherever, sleep wherever, climb wherever and provides a little homeliness to your travels.  </p>
+	  
+	  <img src="assets/ChulillaOasis.jpg">
+	  
+	  </section>
+	  
+	  
+	  <!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="container">
+
+      <img id="mySlides" src="#" style= "display: block;">
+	
+	<!-- Next/previous controls -->
+    <a id="prev" onclick ="galleryPrev()" >&#10094;</a>
+    <a id="next" onclick ="galleryNext()">&#10095;</a>
+  </div>	
+</div>
+      
+	
+      
+	  <section class="article fade-in two" id="TheGoldenHour" onclick= "openModal1()">
+	  
+	  <h3>The Golden Hour</h3>
+	  
+	  <p> The hour preceding the setting of the sun provides a majestic, radiant light prime for some late sending photo opportunities!  
+	  However like all good things, this doesn't last forever and soon the headtorches and lamps were out for a spooky night session.</p>
+	  
+	  <img src="assets/Thegoldenhour.jpg">
+	  
+	  </section>
+	 
+	  <section class="article fade-in three" id="InTooDeep" onclick= "openModal()">
+	  
+	  
+	  <h3>In Too Deep</h3>
+	  
+	  <p> The coming of the the end of the summer marks the start of the Britich deep water solo season.  
+	  The months of glorious sunshine beaming down from the skies onto the seas means August, Septemebr and even October give us our warmest sea temperatures!  
+	  This signals the mass migration of psyched climber folk down to esoteric sea cliffs and zawns around the UK to get a piece of the action!
+	  This year we joined in at Pembroke and Berry Head, Devon. </p>
+	  
+	    <img src="assets/AlexPembroke.jpg">
+	  
+	  </section>
+	  
+
+	  
+	  <section class="article fade-in four" id="BenignLives" onclick= "openModal()">
+	  
+	  <h3>Benign Lives</h3>
+	  
+	  <p>The cold northern winter temperatures bring the present of friction, perfect for precarious highball slab climbing, 
+	  this time we tackled the Johnny Dawes classic "Benign Lives" 7a+ at Froggatt, Peak District </p>
+	  
+	    <img src="assets/BenignLives.jpg">
+	  
+	  </section>
+	  
+	    
+	<footer>
+	<p>Site developed and maintained by Liam Jones</p>
+	</footer> 
+	</div>
+	
+	
+    
+	
+  
+  </body>
+
+
+
+
+
+
+
+</html>
