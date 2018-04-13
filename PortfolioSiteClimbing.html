@@ -27,44 +27,19 @@ spanishAdventure[5].src = 'https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/2667
 spanishAdventure[6] = new Image();
 spanishAdventure[6].src = 'https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26841396_1743696739007935_7256143030060966136_o.jpg?_nc_cat=0&oh=d0b9cbe4f3920af54083ea12d2d19b40&oe=5B63A5E7';
    
+var imageCount = 0;
+var totalImage = spanishAdventure.length -1; //array length starting from 0
+var displayImg = document.getElementById('mySlides'); //HTML img element which image will be displayed
    
-   
-function nextImage()
-{
-
-var img = document.getElementById('mySlides');
-    for(var i = 0; i < spanishAdventure.length;i++)
-    {
-        if(spanishAdventure[i].src == img.src) // << check this
-        {
-            if(i === spanishAdventure.length){
-                img.src = spanishAdventure[0].src;
-                break;
-            }
-            img.src = spanishAdventure[i+1].src;
-            break;
-        }
-    }
+function imagePrev() {
+  imageCount > 0 ? imageCount-- : imageCount = totalImage;
+  document.getElementById('mySlides').src = spanishAdventure[imageCount].src;
 }
 
-function prevImage()
-{
-
-var img = document.getElementById('mySlides');
-    for(var i = 0; i < spanishAdventure.length;i--)
-    {
-        if(spanishAdventure[i].src == img.src) // << check this
-        {
-            if(i === spanishAdventure.length){
-                img.src = spanishAdventure[0].src;
-                break;
-            }
-            img.src = spanishAdventure[i-1].src;
-            break;
-        }
-    }
+function imageNext() {
+  imageCount < totalImage ? imageCount++ : imageCount = 0;
+  document.getElementById('mySlides').src = spanishAdventure[imageCount].src;
 }
-
 
 	</script>
   </head>
@@ -120,11 +95,11 @@ var img = document.getElementById('mySlides');
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="container">
 
-      <img id="mySlides" src="https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26756508_1743696655674610_7179458580676129491_o.jpg?_nc_cat=0&oh=f16a2edf4ee735e66b6dab095b7fb43c&oe=5B6B32B3" style= "display: block;">
+      <img id="mySlides" src = "https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26756508_1743696655674610_7179458580676129491_o.jpg?_nc_cat=0&oh=f16a2edf4ee735e66b6dab095b7fb43c&oe=5B6B32B3"style= "display: block;">
 	
 	<!-- Next/previous controls -->
-    <button id="prev" onclick ="prevImage()" >&#10094;</button>
-    <button id="next" onclick ="nextImage()">&#10095;</button>
+    <button id="prev" onClick ="imagePrev()" >&#10094;</button>
+    <button id="next" onClick ="imageNext()">&#10095;</button>
   </div>	
 </div>
       
