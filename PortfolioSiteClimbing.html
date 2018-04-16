@@ -3,45 +3,7 @@
     <title>Liam Jones PortfolioSite</title>
 	<link rel="stylesheet" href="PortfolioSiteClimbing.css">
 	<script type="text/javascript" src="PortfolioSiteHome.js"></script>
-	<script type="text/javascript">
-	var spanishAdventure = new Array();
 
-spanishAdventure[0] = new Image();
-spanishAdventure[0].src = 'https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26756508_1743696655674610_7179458580676129491_o.jpg?_nc_cat=0&oh=f16a2edf4ee735e66b6dab095b7fb43c&oe=5B6B32B3'; //Tom dining
-
-spanishAdventure[1] = new Image();
-spanishAdventure[1].src = 'https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26758659_1743696569007952_4447096103197624856_o.jpg?_nc_cat=0&oh=a7f015a6709fa9a26f06b07fe9782999&oe=5B6A180E'; //Me chilling
-
-spanishAdventure[2] = new Image();
-spanishAdventure[2].src = 'https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26678421_1743695449008064_7298258449829506874_o.jpg?_nc_cat=0&oh=d8fb71ad599a0a630f4d118c1d8be6ca&oe=5B6E0AFD'; //the road
-
-spanishAdventure[3] = new Image();
-spanishAdventure[3].src = 'https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26678110_1743696009008008_4042393389305650172_o.jpg?_nc_cat=0&oh=7d6afafd399c4a2d5d8f0747d59d8353&oe=5B73557C'; //Night Van
-
-spanishAdventure[4] = new Image();
-spanishAdventure[4].src = 'https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26756324_1743697449007864_8430059194945119796_o.jpg?_nc_cat=0&oh=5c93856d22087dbf550fc98dfd7a79ce&oe=5B5FBF15';
-
-spanishAdventure[5] = new Image();
-spanishAdventure[5].src = 'https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26678350_1743697612341181_2805503461338827658_o.jpg?_nc_cat=0&oh=1e6d3b0c44b783742de688cedacccc20&oe=5B6E31BF';
-
-spanishAdventure[6] = new Image();
-spanishAdventure[6].src = 'https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26841396_1743696739007935_7256143030060966136_o.jpg?_nc_cat=0&oh=d0b9cbe4f3920af54083ea12d2d19b40&oe=5B63A5E7';
-   
-var imageCount = 0;
-var totalImage = spanishAdventure.length -1; //array length starting from 0
-var displayImg = document.getElementById('mySlides'); //HTML img element which image will be displayed
-   
-function imagePrev() {
-  imageCount > 0 ? imageCount-- : imageCount = totalImage;
-  document.getElementById('mySlides').src = spanishAdventure[imageCount].src;
-}
-
-function imageNext() {
-  imageCount < totalImage ? imageCount++ : imageCount = 0;
-  document.getElementById('mySlides').src = spanishAdventure[imageCount].src;
-}
-
-	</script>
   </head>
   
   <body>
@@ -78,7 +40,7 @@ function imageNext() {
 	<div class="articles">
 	
 	  
-	  <section class="article fade-in one" id="TheGoldenHour" onclick="openModal()">
+	  <section class="article fade-in one" id="TheSpanishAdventure" onclick="openModal('SpanishAdventureModal')">
 	  
 	  <h3>The Spanish Adventure</h3>
 	  
@@ -91,21 +53,27 @@ function imageNext() {
 	  
 	  
 	  <!-- The Modal/Lightbox -->
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
+<div id="SpanishAdventureModal" class="modal">
+  <span class="close cursor" onclick="closeModal('SpanishAdventureModal')">&times;</span>
   <div class="container">
 
-      <img id="mySlides" src = "https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26756508_1743696655674610_7179458580676129491_o.jpg?_nc_cat=0&oh=f16a2edf4ee735e66b6dab095b7fb43c&oe=5B6B32B3"style= "display: block;">
-	
+    <img class = "SA image1" src = "https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26756508_1743696655674610_7179458580676129491_o.jpg?_nc_cat=0&oh=f16a2edf4ee735e66b6dab095b7fb43c&oe=5B6B32B3" alt = "Tom Dining" style= "display: block;">
+	  <img class = "SA image2" src = "https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26758659_1743696569007952_4447096103197624856_o.jpg?_nc_cat=0&oh=a7f015a6709fa9a26f06b07fe9782999&oe=5B6A180E" alt = "Me Chilling" style= "display: none;">
+	  <img class = "SA image3" src = "https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26678421_1743695449008064_7298258449829506874_o.jpg?_nc_cat=0&oh=d8fb71ad599a0a630f4d118c1d8be6ca&oe=5B6E0AFD" alt = "The Road" style= "display: none;">
+		<img class = "SA image4" src = "https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26678110_1743696009008008_4042393389305650172_o.jpg?_nc_cat=0&oh=7d6afafd399c4a2d5d8f0747d59d8353&oe=5B73557C" alt = "Night Van" style= "display: none;">
+	  <img class = "SA image5" src = "https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26756324_1743697449007864_8430059194945119796_o.jpg?_nc_cat=0&oh=5c93856d22087dbf550fc98dfd7a79ce&oe=5B5FBF15" alt = "" style= "display: none;">
+	  <img class = "SA image6" src = "https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26678350_1743697612341181_2805503461338827658_o.jpg?_nc_cat=0&oh=1e6d3b0c44b783742de688cedacccc20&oe=5B6E31BF" alt = "" style= "display: none;">
+	  <img class = "SA image7" src = "https://scontent.flhr4-1.fna.fbcdn.net/v/t31.0-8/26678350_1743697612341181_2805503461338827658_o.jpg?_nc_cat=0&oh=1e6d3b0c44b783742de688cedacccc20&oe=5B6E31BF" alt = "" style= "display: none;">
 	<!-- Next/previous controls -->
-    <button id="prev" onClick ="imagePrev()" >&#10094;</button>
-    <button id="next" onClick ="imageNext()">&#10095;</button>
+    <button id="prev" onClick ="imagePrev('SA')" >&#10094;</button>
+    <button id="next" onClick ="imageNext('SA')">&#10095;</button>
   </div>	
 </div>
+
       
 	
       
-	  <section class="article fade-in two" id="TheGoldenHour" onclick= "openModal1()">
+	  <section class="article fade-in two" id="TheGoldenHour" onclick= "openModal('GoldenHourModal')">
 	  
 	  <h3>The Golden Hour</h3>
 	  
@@ -115,8 +83,26 @@ function imageNext() {
 	  <img src="assets/Thegoldenhour.jpg">
 	  
 	  </section>
+	  
+	  	  <!-- The Modal/Lightbox -->
+<div id="GoldenHourModal" class="modal">
+  <span class="close cursor" onclick="closeModal('GoldenHourModal')">&times;</span>
+  <div class="container">
+
+      <img id="mySlides" src = "" alt = "" style= "display: block;">
+	  <img id="mySlides" src = "" alt = "" style= "display: block;">
+	  <img id="mySlides" src = "" alt = "" style= "display: block;">
+	  <img id="mySlides" src = "" alt = "" style= "display: block;">
+	  <img id="mySlides" src = "" alt = "" style= "display: block;">
+	
+	<!-- Next/previous controls -->
+    <button id="prev" onClick ="imagePrev()" >&#10094;</button>
+    <button id="next" onClick ="imageNext()">&#10095;</button>
+  </div>	
+</div>
 	 
-	  <section class="article fade-in three" id="InTooDeep" onclick= "openModal()">
+	  <section class="article fade-in three" id="InTooDeep" onclick= "openModal('TooDeepModal')">
+	  
 	  
 	  
 	  <h3>In Too Deep</h3>
@@ -129,6 +115,23 @@ function imageNext() {
 	    <img src="assets/AlexPembroke.jpg">
 	  
 	  </section>
+	  
+	  	  <!-- The Modal/Lightbox -->
+<div id="TooDeepModal" class="modal">
+  <span class="close cursor" onclick="closeModal('TooDeepModal')">&times;</span>
+  <div class="container">
+
+      <img id="mySlides" src = "" alt = "" style= "display: block;">
+	  <img id="mySlides" src = "" alt = "" style= "display: block;">
+	  <img id="mySlides" src = "" alt = "" style= "display: block;">
+	  <img id="mySlides" src = "" alt = "" style= "display: block;">
+	  <img id="mySlides" src = "" alt = "" style= "display: block;">
+	
+	<!-- Next/previous controls -->
+    <button id="prev" onClick ="imagePrev()" >&#10094;</button>
+    <button id="next" onClick ="imageNext()">&#10095;</button>
+  </div>	
+</div>
 	  
 
 	  
@@ -143,13 +146,56 @@ function imageNext() {
 	  
 	  </section>
 	  
+	  	  <!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="container">
+
+      <img id="mySlides" src = "" alt = "" style= "display: block;">
+	  <img id="mySlides" src = "" alt = "" style= "display: block;">
+	  <img id="mySlides" src = "" alt = "" style= "display: block;">
+	  <img id="mySlides" src = "" alt = "" style= "display: block;">
+	  <img id="mySlides" src = "" alt = "" style= "display: block;">
+	
+	<!-- Next/previous controls -->
+    <button id="prev" onClick ="imagePrev()" >&#10094;</button>
+    <button id="next" onClick ="imageNext()">&#10095;</button>
+  </div>	
+</div>
+	  
 	    
 	<footer>
 	<p>Site developed and maintained by Liam Jones</p>
 	</footer> 
 	</div>
 	
+	<script type="text/javascript">
+
+
+function imageNext(Class) {
 	
+for (i=1; i<7;i++) {
+  document.getElementByClass(Class + " image" +i).style.display ="none";
+  document.getElementByClass(Class + " image" +(i+1)).style.display="block";
+  }
+  if (i>7) {
+  document.getElementByClass(Class +" image1").style.display ="block";}
+   
+  }
+ 
+function imagePrev(Class) {
+for (i=1; i<7;i++) {
+  document.getElementByClass(Class + " image" + i).style.display ="none";
+  document.getElementByClass(Class + " image" +(i-1)).style.display="block";
+  }
+  if (i<1) {
+  document.getElementByClass(Class + "image7").style.display ="block";}
+  
+  }
+  
+}
+
+	</script>	
     
 	
   
